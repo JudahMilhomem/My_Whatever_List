@@ -15,52 +15,77 @@ app.listen(port, () => { // inicia o servidor na porta 3000
 // ----- ROUTES ---- //
 // get all games
 app.get('/api/v1/games', async (req, res) => {
-    const result = await query('SELECT * FROM games');
-    console.log(result.rows);
-    res.status(200).json({
-        status: 'Success!',
-        data: {
-            game_01: ['Resident Evil 4 Remake', '2023']
-        }
-    });
+    try{
+        const result = await query('SELECT * FROM games');
+        res.status(200).json({
+            results: result.rows.length,
+            data: result.rows
+        });
+    } catch(err){
+        console.log(err);
+    }
 });
 
 // get a game
-app.get('/api/v1/games/:id', (req, res) => { // ':id' -> url parameter
-    // console.log(req.params);
-    res.status(200).json({
-        status: 'Success!',
-        data: {
-            game_02: ['Devil May Cry V', '2019']
-        }
-    });
+app.get('/api/v1/games/:id', async (req, res) => { // ':id' -> url parameter
+    try{
+        const result = await query('SELECT * FROM games WHERE id = $1', [req.params.id]);
+        res.status(200).json({
+            results: result.rows.length,
+            data: result.rows
+        });
+    } catch(err){
+        console.log(err);
+    }
 });
 
 // create a game
-app.post('/api/v1/games/:id', (req, res) => {
-    // console.log(req.params.id);
-    // console.log(req.body);
-    res.status(201).json({
-        status: 'Success!',
-        data: {
-            game_03: ['Broforce', '2013']
-        }
-    });
+app.post('/api/v1/games', async (req, res) => {
+    try{
+        const result = await query('INSERT INTO games(game_name, rdate, descr, company, dmc_rating) VALUES($1, $2, $3, $4, $5) returning *', [
+            // Postman request body **
+            req.body.game_name,
+            req.body.release_date,
+            req.body.description,
+            req.body.company,
+            req.body.sexy_rating
+        ]);
+
+        res.status(201).json({
+            results: result.rows.length,
+            data: result.rows
+        });
+    } catch(err){
+        console.log(err);
+    }
 });
 
 // update a game
-app.put('/api/v1/games/:id', (req, res) => {
-    res.status(200).json({
-        status: 'Success!',
-        data: {
-            game_03: ['Broforce', '2014']
-        }
-    }); 
+app.put('/api/v1/games/:id', async (req, res) => {
+    try{
+        const result = await query('UPDATE games SET game_name = $1, rdate = $2, descr = $3, company = $4, dmc_rating = $5 WHERE id = $6 returning *', [
+            req.body.game_name,
+            req.body.release_date,
+            req.body.description,
+            req.body.company,
+            req.body.sexy_rating,
+            req.params.id
+        ]);
+        res.status(200).json({
+            results: result.rows.length,
+            data: result.rows
+        }); 
+    } catch(err){
+        console.log(err);
+    }
 });
 
 // delete a game
-app.delete('/api/v1/games/:id', (req, res) => {
-    res.status(204).json({ // no content
-        status: 'Deleted!'
-    }); 
+app.delete('/api/v1/games/:id', async (req, res) => {
+    try{
+        const result = await query('DELETE FROM games WHERE id = $1', [req.params.id]);
+        res.status(204).send('O Dudu é guei');
+    } catch(err){
+        console.log(err);
+    }
 });
