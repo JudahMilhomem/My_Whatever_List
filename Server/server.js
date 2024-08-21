@@ -1,7 +1,11 @@
-require('dotenv').config();
-const express = require('express'); // importa o express
-const app = express(); // cria uma instncia do express
-app.use(express.json());
+import dotenv from 'dotenv';
+dotenv.config();
+import express, { json } from 'express'; // importa o Express
+const app = express(); // cria uma instância do Express
+import { query } from './DB/index.js'; // importa o acesso ao banco de dados
+
+// Middleware(s)
+app.use(json());
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => { // inicia o servidor na porta 3000
@@ -10,7 +14,9 @@ app.listen(port, () => { // inicia o servidor na porta 3000
 
 // ----- ROUTES ---- //
 // get all games
-app.get('/api/v1/games', (req, res) => {
+app.get('/api/v1/games', async (req, res) => {
+    const result = await query('SELECT * FROM games');
+    console.log(result.rows);
     res.status(200).json({
         status: 'Success!',
         data: {

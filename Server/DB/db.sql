@@ -21,9 +21,13 @@
 CREATE TABLE games(
     id BIGSERIAL NOT NULL PRIMARY KEY,
     game_name VARCHAR(50) NOT NULL,
-    rdate DATE NOT NULL,
+    rdate INT NOT NULL, -- change to DATE **
     descr TEXT, -- description
     -- tags (categories. Ex.: action, horror)
     company VARCHAR(20) NOT NULL,
     dmc_rating VARCHAR(3)
 );
+
+INSERT INTO games(game_name, rdate, descr, company, dmc_rating) VALUES('Hollow Knight', 2017, 'Um jogo muito foda.', 'Team Cherry', 'SSS');
+INSERT INTO games(game_name, rdate, descr, company, dmc_rating) VALUES('Destiny 2', 2017, 'Um jogo que tem um lugar no meu coracao.', 'Bungie', 'SSS');
+INSERT INTO games(game_name, rdate, descr, company, dmc_rating) VALUES('Batman Arkham Knight', 2015, 'Um jogo perfeito.', 'Rocksteady', 'SSS');
