@@ -7,7 +7,7 @@ import { query } from './DB/index.js'; // importa o acesso ao banco de dados
 // Middleware(s)
 app.use(json());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 app.listen(port, () => { // inicia o servidor na porta 3000
     console.log(`Server up and running on port ${port}`);
 });
