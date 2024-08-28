@@ -1,10 +1,12 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import express, { json } from 'express'; // importa o Express
+import cors from 'cors';
 const app = express(); // cria uma instância do Express
 import { query } from './DB/index.js'; // importa o acesso ao banco de dados
 
 // Middleware(s)
+app.use(cors());
 app.use(json());
 
 const port = process.env.PORT || 3333;

@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { GamesProvider } from './context/GamesContext';
 
 import Home from './routes/Home';
 import YourLists from './routes/YourLists';
+import CreateList from './routes/CreateList';
 
 const router = createBrowserRouter([
     {
@@ -11,14 +13,20 @@ const router = createBrowserRouter([
       element: <Home/>
     },
     {
-      path: "/dashboard",
+      path: "/yourlists",
       element: <YourLists/>   
+    },
+    {
+      path: "/createlist",
+      element: <CreateList/>
     }
   ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <GamesProvider>
+        <RouterProvider router={router}/>
+      </GamesProvider>
     </React.StrictMode>
   );
