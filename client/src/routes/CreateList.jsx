@@ -1,11 +1,13 @@
+import './CreateList.css'
+
 import React from 'react'
-import GameFinderForm from '../components/GameFinderForm/GameFinderForm'
+import GameFinder from '../components/GameFinder/GameFinder'
 
 const CreateList = () => {
   return (
     <div>
       <h1>Create a list</h1>
-      <GameFinderForm/>
+      <GameFinder/>
     </div>
   )
 }
