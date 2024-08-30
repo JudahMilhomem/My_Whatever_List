@@ -1,9 +1,13 @@
 html {
     font-size: 62,5%; /* 10px */
+
+    /* color variables: */
+    --primary-color: #1C1F21;
+    --secondary-color: #D23535;
 }
 
 body {
-    background-color: #1C1F21;
+    background-color: var(--primary-color);
     color: #FFFFFF;
 }
 
@@ -36,4 +40,39 @@ body {
 
     justify-content: center;
     align-items: center;
+}
+
+
+/* ----- Buttons CSS ----- */
+/* Type 1 button*/
+.type-1-button {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.type-1-button:hover,
+.type-1-button:focus {
+  background-color: #D34E4E;
 }

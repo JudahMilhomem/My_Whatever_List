@@ -9,7 +9,6 @@ const CreateList = () => {
     <div className="flex-container">
       <main className="flex-container page-content">
         <section className="flex-container list-of-games">
-          <h1 className="title section-title">List Of Games</h1>
           <GameFinderTable/>
         </section>
 

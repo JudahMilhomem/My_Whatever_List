@@ -1,5 +1,7 @@
 // I have even less idea of what I did here
 
+import './GameFinderTable.css'
+
 import React, { useEffect, useContext } from 'react'
 import GameFinder from '../../api/GameFinder'
 import { GamesContext } from '../../context/GamesContext'
@@ -22,7 +24,9 @@ const GameFinderTable = (props) => {
   }, [setGames]); ////
 
   return (
-    <div className="container">
+    <div className="flex-container table-container">
+      <h1 className="title table-title">List Of Games</h1>
+
       <table className="games-table">
         <thead>
           <tr className="bg-danger">
