@@ -4,7 +4,7 @@ import React, { useEffect, useContext } from 'react'
 import GameFinder from '../../api/GameFinder'
 import { GamesContext } from '../../context/GamesContext'
 
-const GameFinderForm = (props) => {
+const GameFinderTable = (props) => {
   const {games, setGames} = useContext(GamesContext);
 
   useEffect(() => {
@@ -47,4 +47,4 @@ const GameFinderForm = (props) => {
   )
 }
 
-export default GameFinderForm
+export default GameFinderTable

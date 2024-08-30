@@ -1,13 +1,22 @@
-import './CreateList.css'
+import '../styles/CreateList.css'
 
 import React from 'react'
-import GameFinder from '../components/GameFinder/GameFinder'
+import GameFinderTable from '../components/GameFinderTable/GameFinderTable'
+import AddGameForm from '../components/AddGameForm/AddGameForm'
 
 const CreateList = () => {
   return (
-    <div>
-      <h1>Create a list</h1>
-      <GameFinder/>
+    <div className="flex-container">
+      <main className="flex-container page-content">
+        <section className="flex-container list-of-games">
+          <h1 className="title section-title">List Of Games</h1>
+          <GameFinderTable/>
+        </section>
+
+        <section className="flex-container add-a-game">
+          <AddGameForm/>
+        </section>
+      </main>
     </div>
   )
 }

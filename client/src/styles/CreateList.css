@@ -1,0 +1,39 @@
+html {
+    font-size: 62,5%; /* 10px */
+}
+
+body {
+    background-color: #1C1F21;
+    color: #FFFFFF;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.page-content {
+    flex-direction: column;
+}
+
+/* LIST OF GAMES SECTION */
+.list-of-games {
+    /* background-color: #605770; */
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 50vh;
+}
+
+/* ADD A GAME SECTION */
+.add-a-game{
+    /* background-color: #E2A0FF; */
+
+    width: 100vw;
+    height: 50vh;
+
+    justify-content: center;
+    align-items: center;
+}
