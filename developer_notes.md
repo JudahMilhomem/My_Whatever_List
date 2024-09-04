@@ -10,4 +10,4 @@
 ## Front-End:
 > 'Create a List' page:
 - If too much items are added to the table, it goes out of bounds;
-- The UI isn't updated accordingly when a new game is added.
+- The UI isn't updated accordingly when a new game is added. [✔️]

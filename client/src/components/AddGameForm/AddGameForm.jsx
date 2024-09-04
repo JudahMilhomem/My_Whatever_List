@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext} from 'react'
 import './AddGameForm.css'
 import GameFinder from '../../api/GameFinder'
+import {GamesContext} from '../../context/GamesContext'
 
 const AddGameForm = () => {
+  const {games, setGames} = useContext(GamesContext);
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [company, setCompany] = useState("");
@@ -16,7 +18,7 @@ const AddGameForm = () => {
             rdate: date,
             company: company
         });
-        console.log(response.data); //
+        setGames([...games, response.data.data[0]]); // https://www.youtube.com/watch?v=q9zKYh8sY_E
     } catch(err){
         console.log(err);
     }
