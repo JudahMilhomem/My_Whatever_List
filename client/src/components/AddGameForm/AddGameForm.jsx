@@ -1,12 +1,26 @@
 import React, { useState } from 'react'
 import './AddGameForm.css'
+import GameFinder from '../../api/GameFinder'
 
 const AddGameForm = () => {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [company, setCompany] = useState("");
-  const [description, setDescription] = useState("");
-
+//   const [description, setDescription] = useState("");
+    // adjust table accordingly **
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try{
+        const response = await GameFinder.post("/", {
+            game_name: name,
+            rdate: date,
+            company: company
+        });
+        // console.log(response);
+    } catch(err){
+        console.log(err);
+    }
+  }
 
   return (
     <div className="flex-container form-section-box">
@@ -53,7 +67,7 @@ const AddGameForm = () => {
                     />
                 </div>
 
-                <div className="flex-container textarea-field-box">
+                {/* <div className="flex-container textarea-field-box">
                     <label htmlFor="game-description">Description</label>
                     <textarea
                         className="textarea description"
@@ -62,9 +76,9 @@ const AddGameForm = () => {
                         onChange={(e) => setDescription(e.target.value)}
                         placeholder="Add a description (optional)"
                     ></textarea>
-                </div>
+                </div> */}
 
-                <button className="submit-button type-1-button">Add new game</button>
+                <button type="submit" onClick={handleSubmit} className="submit-button type-1-button">Add new game</button>
             </form>
         </section>
     </div>

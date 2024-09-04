@@ -45,12 +45,11 @@ app.get('/api/v1/games/:id', async (req, res) => { // ':id' -> url parameter
 app.post('/api/v1/games', async (req, res) => {
     try{
         const result = await query('INSERT INTO games(game_name, rdate, descr, company, dmc_rating) VALUES($1, $2, $3, $4, $5) returning *', [
-            // Postman request body **
             req.body.game_name,
-            req.body.release_date,
-            req.body.description,
+            req.body.rdate,
+            req.body.descr,
             req.body.company,
-            req.body.sexy_rating
+            req.body.dmc_rating
         ]);
 
         res.status(201).json({
