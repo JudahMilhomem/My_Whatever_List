@@ -6,8 +6,9 @@ import UpdateGame from '../components/UpdateGame/UpdateGame'
 const UpdatePage = () => {
   return (
     <div>
-      <main className="container flex-box-container">
+      <main className="container flex-container content-box page-content">
         <h1 className="title page-title">Update game</h1>
+        <h2 className="subheading">*game name*</h2>
         <UpdateGame/>
       </main>
     </div>

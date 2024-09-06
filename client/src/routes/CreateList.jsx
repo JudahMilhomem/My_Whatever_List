@@ -1,4 +1,4 @@
-import '../styles/CreateList.css'
+import '../styles/Application.css'
 
 import React from 'react'
 import GameFinderTable from '../components/GameFinderTable/GameFinderTable'

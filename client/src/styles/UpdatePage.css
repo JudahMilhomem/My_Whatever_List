@@ -1,18 +1,8 @@
-html {
-    font-size: 62.5%;
-}
-
-.flex-box-container {
-    display: flex;
-
+.page-content {
     flex-direction: column;
     align-items: center;
 }
 
-.title {
-    font-size: 5rem;
-}
-
-.text-d1 {
-    font-size: 1.75rem;
+.page-title {
+    margin-bottom: 0;
 }

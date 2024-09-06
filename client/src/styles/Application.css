@@ -19,6 +19,21 @@ body {
     flex-direction: column;
 }
 
+/* text definitions */
+.title {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+}
+
+.subheading {
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.text-d1 {
+    font-size: 1.75rem;
+}
+
 /* LIST OF GAMES SECTION */
 .list-of-games {
     /* background-color: #605770; */

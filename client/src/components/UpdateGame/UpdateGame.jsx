@@ -1,12 +1,20 @@
+import '../../styles/Application.css'
+import '../../styles/UpdatePage.css'
+
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
+import Form from '../Form/Form'
+import Image from '../Image/Image'
+
 const UpdateGame = () => {
-  const {id} = useParams(); // ?? // why '{id}'?
+  const { id } = useParams();
 
   return (
-    <div>
-      <h1 className="text text-d1">That's all folks</h1>
+    <div className="container flex-container content-box">
+      
+      <Image/>
+      <Form/>
     </div>
   )
 }
