@@ -1,12 +1,15 @@
 import './GameFinderTable.css'
 import { ReactComponent as TrashIcon} from './trash-can-icon.svg'
+import { ReactComponent as EditIcon} from './pencil-edit-icon.svg'
 
 import React, { useEffect, useContext } from 'react'
 import GameFinder from '../../api/GameFinder'
 import { GamesContext } from '../../context/GamesContext'
+import { useNavigate } from 'react-router-dom'
 
 const GameFinderTable = (props) => {
   const {games, setGames} = useContext(GamesContext);
+  let navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +35,10 @@ const GameFinderTable = (props) => {
     }
   }
 
+  const handleUpdate = (id) => {
+    navigate(`games/${id}/update`);
+  }
+
   return (
     <div className="flex-container table-container">
       <h1 className="title table-title">List Of Games</h1>
@@ -48,9 +55,12 @@ const GameFinderTable = (props) => {
           {games && games.map((game) => {
             return(
               <tr key={game.id}>
-                <td>{game.game_name}</td>
+                <td className='td td-game-name'>{game.game_name}</td>
                 <td>{game.rdate}</td>
                 <td>{game.company}</td>
+                <td className="icon pencil-edit-icon">
+                  <button onClick={() => handleUpdate(game.id)} className="no-bg-button delete-button"><EditIcon/></button>
+                </td>
                 <td className="icon trash-can-icon">
                   <button onClick={() => handleDelete(game.id)} className="no-bg-button delete-button"><TrashIcon/></button>
                 </td>

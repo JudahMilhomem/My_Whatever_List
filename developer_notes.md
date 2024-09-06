@@ -9,5 +9,5 @@
 
 ## Front-End:
 > 'Create a List' page:
-- If too much items are added to the table, it goes out of bounds;
-- The UI isn't updated accordingly when a new game is added. [✔️]
+- If too much items are added to the table, it goes out of bounds; [ ]
+- Adjust routing to have more coherent names (update game page). [ ]
