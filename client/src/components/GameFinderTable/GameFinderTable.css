@@ -32,3 +32,15 @@ th {
 td {
     background-color: #414141;
 }
+
+.trash-can-icon svg { /* adjustmente needed ** - align with text */
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: var(--secondary-color);
+    cursor: pointer; 
+}
+
+.no-bg-button {
+    background: none;
+    border: none;
+}

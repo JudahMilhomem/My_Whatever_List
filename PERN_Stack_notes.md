@@ -6,4 +6,6 @@
 - First time using environment variables (got to know why are they important);
 - Context API???
 - Routes, data fetching;
-- Got a general idea of how React keeps track of states of things and renders them by using '**_Hooks_**'.
+- Got a general idea of how React keeps track of states of things and renders them by using '**_Hooks_**';
+- Handling SVG images as React components;
+- How to update the UI in real time using React hooks.
