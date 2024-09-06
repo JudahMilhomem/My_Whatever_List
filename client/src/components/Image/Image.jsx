@@ -1,14 +1,14 @@
 import './Image.css'
 
 import React from 'react'
-import example from './Seu_Madruga.jpg'
+import imageName from './RE4_Remake.jpg'
 
 const Image = () => {
   return (
     <div className="image-box">
-      <img src={example} alt="lenda"/>
+      <img src={imageName} alt="imagem"/>
     </div>
   )
 }
 
-export default Image
+export default Image // make it a dynamic component **

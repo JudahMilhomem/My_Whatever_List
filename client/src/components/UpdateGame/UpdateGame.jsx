@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 
 import Form from '../Form/Form'
 import Image from '../Image/Image'
+import Card from '../Card/Card'
 
 const UpdateGame = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const UpdateGame = () => {
   return (
     <div className="container flex-container content-box">
       
-      <Image/>
+      <Card/>
       <Form/>
     </div>
   )
