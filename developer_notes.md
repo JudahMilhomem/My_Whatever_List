@@ -2,6 +2,7 @@
 - Responsive layout;
 - Navigation bar;
 - Update game info logic;
+- Display game image.
 - (...)
 
 # Fix:
@@ -9,6 +10,6 @@
 ![This is fine](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXh3MjBwYWNpOG1rZHMwMHBtMzRjZzkzbzM5YXltenZvdjdid3dkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NTur7XlVDUdqM/giphy.webp) -->
 
 ## Front-End:
-> 'Create a List' page:
+> 'Create a List':
 - If too much items are added to the table, it goes out of bounds; [ ]
 - Adjust routing to have more coherent names (update game page). [ ]

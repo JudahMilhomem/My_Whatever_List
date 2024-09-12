@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+}
+
+.navigation-bar {
+    background-color: #D23535;
+    color: #FFFFFF;
+
+    min-height: 12.5vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 95%;
+    /* height: 90%; ? */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a .option::hover {
+    cursor: pointer;
+}
