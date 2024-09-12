@@ -11,5 +11,3 @@ export const GamesProvider = ({ children }) => {
         </GamesContext.Provider>
     );
 };
-
-// honestly, I have no idea what I just did

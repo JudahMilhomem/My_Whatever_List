@@ -1,6 +1,7 @@
 # Features/Implement:
 - Responsive layout;
 - Navigation bar;
+- Update game info logic;
 - (...)
 
 # Fix:

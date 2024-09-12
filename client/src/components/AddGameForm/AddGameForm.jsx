@@ -8,8 +8,7 @@ const AddGameForm = () => {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [company, setCompany] = useState("");
-//   const [description, setDescription] = useState("");
-    // adjust table accordingly **
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
@@ -18,7 +17,7 @@ const AddGameForm = () => {
             rdate: date,
             company: company
         });
-        setGames([...games, response.data.data[0]]); // https://www.youtube.com/watch?v=q9zKYh8sY_E
+        setGames([...games, response.data.data[0]]);
     } catch(err){
         console.log(err);
     }
@@ -68,17 +67,7 @@ const AddGameForm = () => {
                         required
                     />
                 </div>
-
-                {/* <div className="flex-container textarea-field-box">
-                    <label htmlFor="game-description">Description</label>
-                    <textarea
-                        className="textarea description"
-                        name="game-description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                        placeholder="Add a description (optional)"
-                    ></textarea>
-                </div> */}
+                {/* +implement description */}
 
                 <button type="submit" onClick={handleSubmit} className="submit-button type-1-button">Add new game</button>
             </form>

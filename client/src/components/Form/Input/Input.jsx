@@ -1,19 +1,26 @@
-import React from 'react'
+// Imports
+import React, { useState } from 'react';
 
-const Input = (props) => {
+const Input = ({htmlFor, label, type, value, onChange, placeholder, required}) => {
+
+  // const checkRequired = () => {
+  //   // +implement
+  // }
+
   return (
     <div>
       <div className="flex-container input-field-box">
-        <label htmlFor="game-name">Test <span>*</span></label>
+        <label htmlFor={htmlFor}>{label}</label>
         <input
-            id="game-name"
-            type="text"
-            className="input-field name-input"
-            placeholder="test"/>
-            {/* required or not */}
+            type={type}
+            id={htmlFor}
+            className="input-field name-input" // +implement dynamic classNames **
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}/>
       </div>
     </div>
   )
 }
 
-export default Input
+export default Input;

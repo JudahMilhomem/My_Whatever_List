@@ -8,4 +8,6 @@
 - Routes, data fetching;
 - Got a general idea of how React keeps track of states of things and renders them by using '**_Hooks_**';
 - Handling SVG images as React components;
-- How to update the UI in real time using React hooks.
+- How to update the UI in real time using React hooks;
+- When not to use the Context API for rendering a component;
+- How to deal with generic components and passing states between "father and son".
