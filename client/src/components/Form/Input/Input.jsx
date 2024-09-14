@@ -5,17 +5,16 @@ const Input = ({htmlFor, label, type, value, onChange, placeholder, required}) =
   // }
 
   return (
-    <div>
-      <div className="flex-container input-field-box">
+    <div className="flex-container input-field-box">
         <label htmlFor={htmlFor}>{label}</label>
         <input
             type={type}
             id={htmlFor}
-            className="input-field name-input" // +implement dynamic classNames **
+            // +implement dynamic classNames **
             value={value}
             onChange={onChange}
-            placeholder={placeholder}/>
-      </div>
+            placeholder={placeholder}
+        />
     </div>
   )
 }

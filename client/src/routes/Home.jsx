@@ -22,16 +22,19 @@ const Home = () => {
           <p className="text p1-text" id="website-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit soluta eum ut, ea dolor magni. <br/>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, obcaecati.
+              {/* make adjustment - text alignment */}
           </p>
 
           <Input
+            className="input-field user-input"
             label="User"
             type="text"
             htmlFor="user"
             placeholder="example@gmail.com"
-          />
+          /> {/* make adjustment - label */}
 
           <Input
+            className="input-field password-input"
             label="Password"
             type="password"
             htmlFor="password"
