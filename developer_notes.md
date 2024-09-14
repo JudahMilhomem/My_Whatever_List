@@ -2,7 +2,8 @@
 - Responsive layout;
 - Navigation bar;
 - Update game info logic;
-- Display game image.
+- Display game image;
+- Add a Front-End response for when there's nothing on the games/content table.
 - (...)
 
 # Fix:

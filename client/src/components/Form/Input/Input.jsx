@@ -1,6 +1,3 @@
-// Imports
-import React, { useState } from 'react';
-
 const Input = ({htmlFor, label, type, value, onChange, placeholder, required}) => {
 
   // const checkRequired = () => {

@@ -91,3 +91,12 @@ body {
 .type-1-button:focus {
   background-color: #D34E4E;
 }
+
+/* general */
+a {
+    text-decoration: none;
+}
+
+a .option:hover {
+    cursor: pointer;
+}

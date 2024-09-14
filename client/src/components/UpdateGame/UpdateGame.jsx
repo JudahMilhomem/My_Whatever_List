@@ -13,7 +13,9 @@ import Image from '../Image/Image';
 const UpdateGame = () => {
   return (
     <div className="container flex-container content-box">    
-      <Image/> {/* <Card/> */}
+      <Image
+        src="/images/Hollow_Knight.jpg" // test **
+      /> {/* <Card/> */}
       <Form/>
     </div>
   )

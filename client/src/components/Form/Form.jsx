@@ -5,7 +5,7 @@ import './reset.css';
 // Imports
   // React
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate} from 'react-router-dom';
   // Components
 import Input from './Input/Input';
 
@@ -14,6 +14,7 @@ import GameFinder from '../../api/GameFinder'; // API
 
 const Form = () => {
   const { id } = useParams(); // **
+  let navigate = useNavigate();
 
   // States
   const [name, setName] = useState("");
@@ -40,6 +41,21 @@ const Form = () => {
   const handleDateChange = (e) => {setDate(e.target.value)};
   const handleCompanyChange = (e) => {setCompany(e.target.value)};
 
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    try {
+      const updateGame = await GameFinder.put(`/${id}`, {
+        game_name: name,
+        rdate: date,
+        company
+      });
+      navigate('createlist');
+      // +implement success message
+    } catch(err) {
+      console.log(err);
+    }
+  }
+
   return (
     <div>
       <section>
@@ -50,6 +66,7 @@ const Form = () => {
               htmlFor="game-name"
               value={name}
               onChange={handleNameChange}
+              onClick={handleUpdate}
               placeholder="Insert game name"
             />
 
@@ -59,6 +76,7 @@ const Form = () => {
               htmlFor="release-date"
               value={date}
               onChange={handleDateChange}
+              onClick={handleUpdate}
               placeholder="Insert release date"
             />
 
@@ -68,10 +86,11 @@ const Form = () => {
               htmlFor="game-company"
               value={company}
               onChange={handleCompanyChange}
+              onClick={handleUpdate}
               placeholder="Insert game's company"
             />
 
-            <button type="submit" className="submit-button type-1-button">Update</button>
+            <button type="button" onClick={handleUpdate} className="submit-button type-1-button">Update</button>
         </form>
       </section>
     </div>

@@ -25,6 +25,6 @@ a {
     color: inherit;
 }
 
-a .option::hover {
+a .option:hover {
     cursor: pointer;
 }
