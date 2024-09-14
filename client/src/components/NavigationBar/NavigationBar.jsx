@@ -1,21 +1,23 @@
 // Style
-import './NavigationBar.css'
+import './NavigationBar.css';
 
 // Imports
     // React
 import React from 'react';
 import { ReactComponent as ProfileIcon} from './circle-profile-icon.svg';
+import { ReactComponent as BurgerMenu} from './burger-menu-icon.svg';
 
 const NavigationBar = () => {
   return (
     <div className="flex-container navigation-bar">
         <div className="flex-container options-container">
             <a className="icon profile-icon" href="">
-              {/* <ProfileIcon/> */}
-              <p>*PROFILE PICTURE*</p>
+              <ProfileIcon/>
             </a>
 
-            {/* +implement Burger Menu */}
+            <a className="icon burger-menu-icon" href="">
+              <BurgerMenu/>
+            </a>
         </div>
     </div>
   )

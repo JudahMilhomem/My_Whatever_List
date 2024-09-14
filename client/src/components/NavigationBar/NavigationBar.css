@@ -25,6 +25,18 @@
     /* height: 90%; ? */
 }
 
+svg {
+    width: 5rem;
+    height: 5rem;
+    /* + make it responsive relative to the navbar */
+}
+
+/* + change icons colors */
+
+.burger-menu-icon {
+    color: white;
+}
+
 a {
     text-decoration: none;
     color: inherit;
