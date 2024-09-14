@@ -5,17 +5,21 @@ import '../styles/Home.css'
 // Imports
   // React
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
   // Components
 import Input from '../components/Form/Input/Input';
-// import NavigationBar from '../components/NavigationBar/NavigationBar';
 
 const Home = () => {
+  let navigate = useNavigate();
+  const handleLogin = () => {
+    // implement Login logic **
+      // in a far far future...
+    
+      navigate('your-page');
+  }
+
   return (
-    <div>
-      <header>
-        {/* <NavigationBar/> */}
-      </header>
-      
+    <div>   
       <main className="flex-container main-content">
         <section className="flex-container form login-form">
           <h1 className="title h2-text" id="welcome-message">Welcome to My Whatever List!</h1>
@@ -41,7 +45,7 @@ const Home = () => {
             placeholder="Insert your password"
           />
 
-          <button className="login-button type-1-button">Login</button>
+          <button onClick={handleLogin} className="login-button type-1-button">Login</button>
           <a href="#" className="recover-login-info">Trouble logging in?</a>
         </section>
       </main>

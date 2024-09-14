@@ -4,15 +4,18 @@ import './NavigationBar.css'
 // Imports
     // React
 import React from 'react';
+import { ReactComponent as ProfileIcon} from './circle-profile-icon.svg';
 
 const NavigationBar = () => {
   return (
-    <div className="container flex-container navigation-bar">
-        <div className="container flex-container options-container">
-            <a href=""><h1 className="logo">*LOGO*</h1></a>
+    <div className="flex-container navigation-bar">
+        <div className="flex-container options-container">
+            <a className="icon profile-icon" href="">
+              {/* <ProfileIcon/> */}
+              <p>*PROFILE PICTURE*</p>
+            </a>
 
-            <a href=""><h2 className="option your-profile">Your Profile</h2></a>
-            <a href="http://localhost:3000/createlist"><h2 className="option create">Create</h2></a>
+            {/* +implement Burger Menu */}
         </div>
     </div>
   )

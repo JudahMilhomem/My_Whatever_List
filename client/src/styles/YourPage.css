@@ -1,0 +1,14 @@
+.main-content {
+    margin-top: 15rem; /* ! */
+
+    justify-content: flex-start;
+}
+
+#no-lists, .text-box {
+    margin-bottom: 1rem;
+}
+
+.text-box {
+    flex-direction: column;
+    align-items: center;
+}

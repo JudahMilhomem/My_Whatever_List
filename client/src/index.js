@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GamesProvider } from './context/GamesContext';
 
 import Home from './routes/Home';
-import YourLists from './routes/YourLists';
+import YourPage from './routes/YourPage';
 import CreateList from './routes/CreateList';
 import UpdatePage from './routes/UpdatePage';
 
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
       element: <Home/>
     },
     {
-      path: "/yourlists",
-      element: <YourLists/>   
+      path: "/your-page",
+      element: <YourPage/>
     },
     {
       path: "/createlist",
