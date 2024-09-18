@@ -1,8 +1,6 @@
-.page-content {
+.header-content {
+    /* background-color: #8A89C0; */
+
     flex-direction: column;
     align-items: center;
-}
-
-.page-title {
-    margin-bottom: 0;
 }

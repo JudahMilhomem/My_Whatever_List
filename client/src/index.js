@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       element: <CreateList/>
     },
     {
-      path: "createlist/games/:id/update", // <-- change route (remove 'createlist') **
+      path: "createlist/games/:id/update", // !!
       element: <UpdatePage/>
     }
   ]);

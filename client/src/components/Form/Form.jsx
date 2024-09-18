@@ -12,7 +12,7 @@ import Input from './Input/Input';
 import GameFinder from '../../api/GameFinder'; // API
 
 
-const Form = () => {
+const Form = ({className}) => {
   const { id } = useParams(); // **
   let navigate = useNavigate();
 
@@ -59,7 +59,7 @@ const Form = () => {
   return (
     <div>
       <section>
-        <form action="">
+        <form className={`form ${className}`} action="">
             <Input
               label="Name"
               type="text"

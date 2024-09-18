@@ -1,6 +1,7 @@
 // Style
 import '../../styles/Application.css';
 import '../../styles/UpdatePage.css';
+import './UpdateGame.css'
 
 // Imports
   // React
@@ -8,16 +9,19 @@ import React from 'react';
   // Components
 import Form from '../Form/Form';
 import Image from '../Image/Image';
-// import Card from '../Card/Card'
 
 const UpdateGame = () => {
   return (
-    <div className="container flex-container content-box">    
-      <Image
-        src="/images/Hollow_Knight.jpg" // test **
-      /> {/* <Card/> */}
-      <Form/>
-    </div>
+    <main className="container flex-container main-content">
+      <section className="container flex-container game-info-content-container">
+        <div className="container flex-container game-info-content">
+          <Image
+            className="game-image"/>
+          <Form
+            className="game-info-form"/>
+        </div>
+      </section>
+    </main>
   )
 }
 

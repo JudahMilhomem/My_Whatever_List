@@ -1,16 +1,22 @@
-# Features/Implement:
+# Implement features:
 - Responsive layout;
-- Navigation bar;
-- Update game info logic;
-- Display game image;
-- Add a Front-End response for when there's nothing on the games/content table.
+- Functional user navigation bar;
+- Update game functionality;
+- Image display on Game Update page and image edition;
+- Front-End response for empty table;
+- Page "reload" in case of delayed data fetching;
+<!-- - Report list feature; -->
 - (...)
 
 # Fix:
-<!-- Nothing to see here... <br>
-![This is fine](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXh3MjBwYWNpOG1rZHMwMHBtMzRjZzkzbzM5YXltenZvdjdid3dkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NTur7XlVDUdqM/giphy.webp) -->
-
+<!-- Nothing to see here... <br> -->
+![This is fine](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXh3MjBwYWNpOG1rZHMwMHBtMzRjZzkzbzM5YXltenZvdjdid3dkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NTur7XlVDUdqM/giphy.webp)
 ## Front-End:
-> 'Create a List':
-- If too much items are added to the table, it goes out of bounds; [ ]
-- Adjust routing to have more coherent names (update game page). [ ]
+- If too many items are added to the table, it goes out of bounds (GameFinderTable component); [ ]
+- Adjust Update Game page routing. [ ]
+<!-- ## Back-End:
+## Database: -->
+
+# Notes/Reminders:
+- Add Requisites (Software Engineering part missing);
+- Uninstall Bootstrap and MUI.

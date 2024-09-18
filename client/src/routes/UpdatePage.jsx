@@ -32,12 +32,12 @@ const UpdatePage = () => {
   }, []);
 
   return (
-    <div>
-      <main className="container flex-container content-box page-content">
+    <div className="container flex-container page-content">
+      <header className="container flex-container header-content">
         <h1 className="title page-title">Update game</h1>
-        <h2 className="subheading">{name}</h2>
-        <UpdateGame/>
-      </main>
+        <h2 className="subheading game-name">{name}</h2>
+      </header>
+      <UpdateGame/>
     </div>
   )
 }

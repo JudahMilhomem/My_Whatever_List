@@ -1,0 +1,31 @@
+.main-content {
+    background-color: #06D6A0;
+
+    margin-top: 0;
+    max-height: 90vh; /* gambiarra */
+
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info-content-container {
+    background-color: #048A81;
+
+    width: 40%;
+    height: 70%;
+
+    justify-content: center;
+    align-items: start;
+}
+
+.game-info-content {
+    align-items: center;
+}
+
+.game-image { /* ?????????? */
+    max-width: 10rem;
+}
+
+.game-info-form {
+    background-color: #9DB5B2;
+}
