@@ -1,1 +1,0 @@
-Figma design file link: https://www.figma.com/design/GmInm9Men8NTBkMiHV6usZ/My-Whatever-List
