@@ -1,5 +1,5 @@
 .main-content {
-    background-color: #06D6A0;
+    /* background-color: #06D6A0; */
 
     margin-top: 0;
     max-height: 90vh; /* gambiarra */
@@ -9,7 +9,7 @@
 }
 
 .game-info-content-container {
-    background-color: #048A81;
+    /* background-color: #048A81; */
 
     width: 40%;
     height: 70%;
@@ -24,8 +24,18 @@
 
 .game-image { /* ?????????? */
     max-width: 10rem;
+
+    margin-right: 2rem;
 }
 
 .game-info-form {
-    background-color: #9DB5B2;
+    /* background-color: #9DB5B2; */
+
+    flex-direction: column;
+}
+
+form button {
+    width: 50%;
+
+    align-self: center;
 }

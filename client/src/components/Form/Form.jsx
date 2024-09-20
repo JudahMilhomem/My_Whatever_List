@@ -59,7 +59,7 @@ const Form = ({className}) => {
   return (
     <div>
       <section>
-        <form className={`form ${className}`} action="">
+        <form className={`container flex-container form ${className}`} action="">
             <Input
               label="Name"
               type="text"

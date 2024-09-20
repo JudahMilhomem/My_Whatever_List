@@ -1,3 +1,6 @@
+// Style
+import './Input.css';
+
 const Input = ({htmlFor, label, type, value, onChange, placeholder, required}) => {
 
   // const checkRequired = () => {
@@ -5,7 +8,7 @@ const Input = ({htmlFor, label, type, value, onChange, placeholder, required}) =
   // }
 
   return (
-    <div className="flex-container input-field-box">
+    <div className="container flex-container input-field-box">
         <label htmlFor={htmlFor}>{label}</label>
         <input
             type={type}

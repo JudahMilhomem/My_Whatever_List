@@ -55,9 +55,9 @@ input, textarea {
 
 .input-field-box input,
 .textarea-field-box textarea {
-    width: 70%; /* needs adjusting to be more responsive */
+    width: 70%; /* ! */
 }
 
 .submit-button {
-    margin-top: 1.5rem;;
+    margin-top: 1.5rem;
 }
