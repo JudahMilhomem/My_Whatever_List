@@ -1,19 +1,21 @@
 // Style
 import './Input.css';
 
-const Input = ({htmlFor, label, type, value, onChange, placeholder, required}) => {
+const Input = ({containerClassName, labelClassName, inputClassName, 
+  htmlFor, label, type, value, onChange, placeholder, required}) => {
 
   // const checkRequired = () => {
-  //   // +implement
+    // +
   // }
 
   return (
-    <div className="container flex-container input-field-box">
-        <label htmlFor={htmlFor}>{label}</label>
+    <div className={`generic-input-container ${containerClassName}`}>
+      {/* ! */}
+        <label className={`generic-label ${labelClassName}`} htmlFor={htmlFor}>{label}</label>
         <input
+            className={`generic-input ${inputClassName}`}
             type={type}
             id={htmlFor}
-            // +implement dynamic classNames **
             value={value}
             onChange={onChange}
             placeholder={placeholder}

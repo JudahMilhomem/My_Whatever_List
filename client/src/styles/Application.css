@@ -15,6 +15,10 @@ body {
     display: flex;
 }
 
+.grid-container {
+    display: grid;
+}
+
 .page-content {
     flex-direction: column;
 }
